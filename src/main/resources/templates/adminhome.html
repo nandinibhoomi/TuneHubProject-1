@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ADMIN</title>
+<link rel=stylesheet type=text/css th:href="@{/adminhome.css}">
+<style>
+body {
+    background-image: url('/adminhome.png');
+    background-size: 40%;
+    animation: slideBackground 10s linear infinite; /* Change the duration and timing function as needed */
+}
+@keyframes slideBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+</style>
+</head>
+<body>
+	<h1>Admin Management</h1>
+	
+	<form action="newsong">
+	<input type="submit" value="ADD SONGS">
+	</form>
+	
+	<br><br>
+	<form action="viewsongs">
+	<input type="submit" value="VIEW SONGS">
+	</form>
+	 
+	<br><br>
+	<form action="createplaylists">
+	<input type="submit" value="CREATE PLAYLIST">
+	</form>
+	
+	 
+	<br><br>
+	<form action="viewplaylists">
+	<input type="submit" value="VIEW PLAYLISTS">
+	</form>
+</body>
+</html>

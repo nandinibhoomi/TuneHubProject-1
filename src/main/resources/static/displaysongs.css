@@ -1,0 +1,32 @@
+/* adminhome.css */
+
+/* Define styles for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 60px;
+    border: 6px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 4px solid #ddd;
+}
+
+/* Define styles for the body */
+body {
+    background-size: 90%;
+    animation: slideBackground 10s linear infinite;
+    color: white;
+}
+
+/* Define the animation for the background */
+@keyframes slideBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}

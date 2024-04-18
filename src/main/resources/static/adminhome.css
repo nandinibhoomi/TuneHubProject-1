@@ -1,0 +1,43 @@
+ h1 {
+    text-align: center;
+    color: #c0c0c0;
+    animation-name: fadeInOut;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+form {
+    text-align: center;
+    max-width: 400px;
+    margin: 5px auto;
+    background-color: #c0c0c0;
+    padding: 20px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 5px solid #464646;
+}
+
+
+input[type="submit"] {
+    padding: 10px 20px; /* Add padding to submit buttons */
+    background-color: #000000; /* Set background color */
+    color: #fff; /* Set text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+input[type="submit"]:hover {
+    background-color: #6b6b6b; /* Change background color on hover */
+}

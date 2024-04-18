@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DISPLAY SONGS</title>
+    <link rel=stylesheet type=text/css th:href="@{/displaysongs.css}">
+    <style>
+    
+body {
+    background-image: url('/displaysongs.png');
+    background-size: 70%;
+    animation: slideBackground 10s linear infinite; /* Apply the animation to the background image */
+}
+
+@keyframes slideBackground {
+    0% {
+        background-position: 0% 0%; /* Starting position */
+    }
+    100% {
+        background-position: 100% 100%; /* Ending position */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <table border="1px"> <!-- Added quotes around the border value -->
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Artist</th>
+                <th>Genre</th>
+                <th>Play</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+            <tr th:each="song : ${songs}"> <!-- Changed 'songs' to 'song' for iteration -->
+                <td th:text="${song.name}"></td> <!-- Changed 'songs' to 'song' -->
+                <td th:text="${song.artist}"></td> <!-- Changed 'songs' to 'song' -->
+                <td th:text="${song.genre}"></td> <!-- Changed 'songs' to 'song' -->
+                <td>
+                    <audio controls>
+                        <source th:src="${song.link}"> <!-- Changed 'songs' to 'song' -->
+                    </audio>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

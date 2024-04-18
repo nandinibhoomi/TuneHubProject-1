@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LOGIN</title>
+<link rel=stylesheet type=text/css th:href="@{/login.css}">
+<style>
+body {
+    background-image: url('/login.png');
+    background-size: 30%;
+    animation: slideBackground 15s linear infinite,fadeIn 3s ease-in-out; /* Animation name, duration, timing function, and iteration count */
+}
+
+@keyframes slideBackground {
+    0% {
+        background-position: 0 0; /* Initial position of the background */
+    }
+    100% {
+        background-position: 100% 0; /* Move background to the right */
+    }
+}
+
+</style>
+</head>
+<body>
+<h1>LOGIN</h1>
+<form action="validate" method="post">
+
+	<label>Email:</label><br> 
+	<input type="email" name="email">
+	<br>
+	<br> <label>Password:</label><br> 
+	<input type="password"name="password">
+	<br>
+	<br> <input type="submit" value="LOGIN">
+</form>
+
+
+</body></html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CUSTOMER</title>
+<link rel=stylesheet type=text/css th:href="@{/customerhome.css}">
+<style>
+    
+    body {
+    background-image: url('/customerhome.png');
+    background-size: 80%;
+    animation-name: slideBackground;
+    animation-duration: 15s; /* Adjust as per your preference */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; /* or any other timing function */
+}
+
+@keyframes slideBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+    
+    </style>
+</head>
+<body>
+	<h1>Awesome PlayLists</h1>
+
+
+	<!-- <form action="playsongs" >
+	<input type="submit" value="PLAY SONGS">
+	</form> -->
+
+	<div th:unless="${ispremium}" class="non-premium">
+		<form action="pay">
+			<input type="submit" value="GET PREMIUM">
+		</form>
+		<br>
+		<form action="logout">
+			<input type="submit" value="LOGOUT">
+		</form>
+	</div>
+
+	<div th:if="${ispremium}"  class="premium">
+		<table border="4px">
+			<!-- Added quotes around the border value -->
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Artist</th>
+					<th>Genre</th>
+					<th>Play</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				<tr th:each="song : ${songs}">
+					<!-- Changed 'songs' to 'song' for iteration -->
+					<td th:text="${song.name}"></td>
+					<!-- Changed 'songs' to 'song' -->
+					<td th:text="${song.artist}"></td>
+					<!-- Changed 'songs' to 'song' -->
+					<td th:text="${song.genre}"></td>
+					<!-- Changed 'songs' to 'song' -->
+					<td><audio controls>
+							<source th:src="${song.link}">
+							<!-- Changed 'songs' to 'song' -->
+						</audio></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+/* customerhome.css */
+
+/* Style for the table */
+table {
+    width: 90%; /* Make the table take up the full width */
+    border-collapse: collapse; /* Collapse table borders */
+    margin-left: 6%;
+    color:white;
+    
+}
+
+/* Style for table headers */
+th {
+    padding: 8px; /* Add padding to table headers */
+    text-align: left; /* Align text to the left */
+    background-color: #000000; /* Light gray background color */
+    color:white;
+    border: 2px solid #000000; /* Add border */
+}
+
+/* Style for table data */
+td {
+    padding: 8px; /* Add padding to table cells */
+    border: 2px solid #ddd; /* Add border */
+}
+
+/* Style for unordered lists */
+ul {
+    list-style-type: none; /* Remove bullets from lists */
+    padding: 0; /* Remove default padding */
+}
+
+/* Style for list items */
+li {
+    margin-bottom: 8px; /* Add margin below list items */
+}
+
+/* Style for audio controls */
+audio {
+    margin-top: 5px; /* Add margin to separate audio controls */
+}

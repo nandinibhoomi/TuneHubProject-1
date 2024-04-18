@@ -1,0 +1,97 @@
+/* customerhome.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #c0c0c0;
+    animation-name: fadeInOut;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* Non-premium section styles */
+.non-premium {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.non-premium form {
+    margin-bottom: 10px;
+}
+
+.non-premium input[type="submit"] {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.non-premium input[type="submit"]:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+/* Premium section styles */
+.premium {
+    margin-top: 20px;
+    border-color: black;
+    }
+
+.premium table {
+    width: 100%;
+    border-collapse: collapse;
+    
+    
+}
+
+.premium th, .premium td {
+    padding: 10px;
+    border: 1px solid #ffffff;  
+    color: #ffffff; /* Set the text color to dark gray */
+    font-family: sans-serif;
+    font-size: large;
+    font-style: italic;
+}
+
+
+.premium th {
+    background-color: #333;
+    color: white;
+    text-align: left;
+}
+
+.premium td {
+    text-align: center;
+}
+
+/* Animation */
+@keyframes slide {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

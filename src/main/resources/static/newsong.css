@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-weight:bold;
+    font-family:fantasy;
+    font-size:xx-large;
+    color: #333;
+    animation: fadeIn 4s ease-in-out; /* Apply the fadeIn animation with a duration of 1 second and ease timing function */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with transparency */
+    }
+    to {
+        opacity: 1; /* Fade in to full visibility */
+    }
+}
+
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 5px solid #464646;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000000;
+    
+}
+
+input[type="text"] {
+    width: 100%;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for smooth effect */
+}
+
+input[type="submit"]:hover {
+    background-color: #808080; /* Change background color on hover */
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PLAYLIST </title>
+	<link rel=stylesheet type=text/css th:href="@{/displayplaylist.css}">
+	<style>
+	body {
+    background-image: url('/displayplaylist.png');
+    background-clip:border-box;
+    background-size:20%;
+    animation: slide 10s linear infinite; /* Adjust duration and timing function as needed */
+}
+
+@keyframes slide {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+	
+	</style>
+</head>
+<body>
+    <table border="1px"> <!-- Added quotes around the border value -->
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+            <tr th:each="all : ${allplaylist}">
+            <td th:text="${all.id}"></td>
+            <td>
+                <ul>
+                	<li th:each="song:${all.songs}">
+                			<span  th:text="${song.name}"></span>
+                			<audio controls>
+                				<source th:src="${song.link}"> 
+                			</audio>
+                	</li>
+                </ul>
+             </td> 
+  
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
